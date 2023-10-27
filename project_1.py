@@ -22,11 +22,11 @@ if (choice.upper() == 'D'):
 
     for i in range(len(cipherText)-len(Key)):
         Key += Key[i]
-        
+
     originText = ''
 
     for i in range(len(cipherText)):
-         originText += alphabet[(ord(cipherText[i])  - ord(Key[i])) % 26] #M(i) = (C(i)-K(i))mod26
+         originText += alphabet[((ord(cipherText[i])  - ord(Key[i])) % 26)%26] #M(i) = (C(i)-K(i))mod26
     print(originText)
 
     # 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
